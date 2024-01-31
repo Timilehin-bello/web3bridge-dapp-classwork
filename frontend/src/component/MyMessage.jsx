@@ -1,9 +1,7 @@
 /* eslint-disable react/prop-types */
-// MyMessage.js
 import { useState } from "react";
 // import { ethers } from "ethers";
 
-// eslint-disable-next-line react/prop-types
 const MyMessage = ({ contract }) => {
   const [newMessage, setNewMessage] = useState("");
   const [message, setMessage] = useState("");
@@ -26,17 +24,21 @@ const MyMessage = ({ contract }) => {
   };
 
   return (
-    <div>
-      <h1>My Message DApp</h1>
-      <p>Current Message: {message}</p>
-      <input
-        type="text"
-        placeholder="Enter new message"
-        value={newMessage}
-        onChange={(e) => setNewMessage(e.target.value)}
-      />
-      <button onClick={setMessageOnChain}>Set Message</button>
-      <button onClick={getMessage}>Get Message</button>
+    <div className="">
+      <div className="text-center">
+        <h1>My Message DApp</h1>
+        <p>Current Message: {message}</p>
+      </div>
+      <div className="align-center">
+        <input
+          type="text"
+          placeholder="Enter new message"
+          value={newMessage}
+          onChange={(e) => setNewMessage(e.target.value)}
+        />
+        <button onClick={setMessageOnChain}>Set Message</button>
+        <button onClick={getMessage}>Get Message</button>
+      </div>
     </div>
   );
 };

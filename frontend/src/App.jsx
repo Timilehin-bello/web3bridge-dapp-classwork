@@ -47,9 +47,7 @@ const App = () => {
     init();
   }, []);
 
-  return (
-    <div className="App">{contract && <MyMessage contract={contract} />}</div>
-  );
+  return <div>{contract && <MyMessage contract={contract} />}</div>;
 };
 
 export default App;
