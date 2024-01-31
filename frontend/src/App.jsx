@@ -11,12 +11,6 @@ const App = () => {
 
   useEffect(() => {
     const init = async () => {
-      // Connect to the local Ethereum node (ensure it's running)
-      // const localProvider = new ethers.JsonRpcProvider(
-      //   "https://eth-sepolia.g.alchemy.com/v2/CQKoMUG8_SBRI3EiUzpOLJ5jKKRZnvom"
-      // );
-      // console.log("localProvider", localProvider);
-
       let signer;
       let provider;
       if (window.ethereum == null) {
